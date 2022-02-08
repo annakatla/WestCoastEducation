@@ -72,13 +72,13 @@ nav {
 
 .startText {
   position: absolute;
-  top: 45%;
+  top: 30%;
   color: azure;
   background-color: rgba(105, 105, 105, 0.9);
   max-width: 50%;
   margin: 2em 25%;
-  padding: 0rem 0.5rem;
-  border-radius: 20px;
+  padding: 0.6rem;
+  border-radius: 15px;
 }
 
 .course-container {
