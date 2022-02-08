@@ -1,21 +1,46 @@
-body {
-  font-size: 16px;
-  width: 100%;
-  height: 100%;
+* {
   margin: 0;
   padding: 0;
-  background-color: #d6d6d6;
 }
 
-header {
+body {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.flex-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.menu {
   width: 100%;
-  height: 20%;
+  height: auto;
   margin-top: 0;
-  background-image: url(../IMG/orust.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
+  display: flex;
+}
+
+.bgpic img {
+  width: 100%;
+  align-self: stretch;
+}
+
+.main {
+  background-color: #d6d6d6;
+  width: 100%;
+}
+
+footer {
+  background-color: #ababaf;
+  width: 100%;
+  text-align: center;
   position: fixed;
+  bottom: 0;
+  margin: 0%;
 }
 
 nav {
@@ -23,8 +48,9 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  position: absolute;
   width: 100%;
+  position: absolute;
+  top: 2%;
 }
 
 .nav-links {
@@ -43,44 +69,14 @@ nav {
   color: black;
   text-decoration: none;
 }
+
 .startText {
   color: azure;
-  background-color: dimgrey;
+  background-color: rgba(105, 105, 105, 0.5);
   max-width: 50%;
-  margin: 0em 25%;
+  margin: 2em 25%;
   padding: 0rem 0.5rem;
-}
-
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: auto;
-}
-
-main {
-  margin: 0%;
-}
-
-/* .main-container {
-  display: grid;
-  grid-template-columns: auto auto auto auto auto;
-  grid-template-rows: auto auto auto auto auto;
-  justify-content: space-around;
-} */
-
-footer {
-  background-color: #ababaf;
-  width: 100%;
-  text-align: center;
-  position: fixed;
-  bottom: 0;
-  margin: 0%;
-}
-
-#logo {
-  font-size: 2em;
-  display: block;
-  grid-column: 1;
+  border-radius: 20px;
 }
 
 /*För mobiltelefoner*/
