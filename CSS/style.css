@@ -5,50 +5,31 @@
 
 body {
   font-size: 16px;
-  margin: 0;
-  padding: 0;
   background-color: #d6d6d6;
+  width: 98vw;
+  height: 98vh;
+  margin: 0 auto;
+}
+
+.bgpic img {
+  width: 98vw;
 }
 
 .flex-container {
-  width: 100vw;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: start;
 }
 
-.menu {
-  width: 100vw;
-  height: auto;
-  margin-top: 0;
-  display: flex;
-}
-
-.bgpic img {
-  width: 100vw;
-}
-
-.main {
-  width: 100%;
-}
-
-footer {
-  background-color: #ababaf;
-  width: 100%;
-  text-align: center;
-  position: relative;
-  bottom: 0;
-  margin: 0%;
-  padding: 1rem;
+#logo {
+  padding-left: 2%;
 }
 
 nav {
+  width: 98vw;
   font-family: "Audiowide", cursive;
   display: flex;
-  justify-content: space-between;
   align-items: baseline;
-  width: 100%;
   position: absolute;
   top: 2%;
 }
@@ -56,6 +37,7 @@ nav {
 .nav-links {
   flex: 1;
   text-align: right;
+  padding-right: 2%;
 }
 
 .nav-links ul li {
@@ -70,6 +52,9 @@ nav {
   text-decoration: none;
 }
 
+.main {
+  width: 98vw;
+}
 .startText {
   position: absolute;
   top: 20%;
@@ -82,11 +67,9 @@ nav {
 }
 
 .course-container {
-  width: 100%;
   display: grid;
   grid-template-columns: auto auto auto;
-  grid-template-rows: auto auto auto;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -100,8 +83,20 @@ nav {
   margin: 0.5rem 1rem;
 }
 
+footer {
+  background-color: #ababaf;
+  width: 98vw;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  padding: 1rem 0rem;
+}
+
 /*För mobiltelefoner*/
 @media (max-width: 768px) {
+  .course-container {
+    grid-template-columns: auto;
+  }
   .courseCard {
     width: 100%;
   }
@@ -109,6 +104,9 @@ nav {
 
 /* För paddor */
 @media (min-width: 769px) and (max-width: 992px) {
+  .course-container {
+    grid-template-columns: auto auto;
+  }
   .courseCard {
     width: 100%;
   }
