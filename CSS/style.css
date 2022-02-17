@@ -112,6 +112,9 @@ footer {
 
 /*För mobiltelefoner*/
 @media (max-width: 768px) {
+  .nav-links ul li a {
+    background-color: rgba(105, 105, 105, 0.7);
+  }
   .course-container {
     grid-template-columns: auto;
   }
@@ -119,6 +122,7 @@ footer {
     width: 100%;
   }
   .main {
+    margin-top: 3rem;
     margin-bottom: 15rem;
   }
 }
