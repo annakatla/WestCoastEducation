@@ -101,6 +101,10 @@ nav {
   border-radius: 5px;
 }
 
+.courseBtn {
+  margin-top: 0.8rem;
+}
+
 footer {
   background-color: #ababaf;
   width: 98vw;
