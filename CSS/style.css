@@ -48,22 +48,39 @@ nav {
 }
 
 .nav-links ul li a {
+  background-color: rgba(134, 125, 125, 0.2);
   color: black;
   text-decoration: none;
+  border-radius: 10%;
+}
+
+.nav-links ul li a:hover {
+  font-weight: bold;
+}
+
+.active {
+  color: yellow;
 }
 
 .main {
   width: 98vw;
+  margin-bottom: 5rem;
 }
+
 .startText {
   position: absolute;
   top: 20%;
   color: azure;
   background-color: rgba(105, 105, 105, 0.9);
-  max-width: 50%;
-  margin: 2em 25%;
+  max-width: 90%;
+  margin: 2em 5%;
   padding: 0.6rem;
   border-radius: 15px;
+}
+
+.startText {
+  text-decoration: none;
+  color: azure;
 }
 
 .course-container {
@@ -81,13 +98,14 @@ nav {
   padding: 1rem;
   text-align: center;
   margin: 0.5rem 1rem;
+  border-radius: 5px;
 }
 
 footer {
   background-color: #ababaf;
   width: 98vw;
   text-align: center;
-  position: relative;
+  position: fixed;
   bottom: 0;
   padding: 1rem 0rem;
 }
@@ -100,6 +118,9 @@ footer {
   .courseCard {
     width: 100%;
   }
+  .main {
+    margin-bottom: 15rem;
+  }
 }
 
 /* För paddor */
@@ -110,11 +131,25 @@ footer {
   .courseCard {
     width: 100%;
   }
+  .startText {
+    max-width: 70%;
+    margin: 2em 15%;
+  }
+  .main {
+    margin-bottom: 5rem;
+  }
 }
 
 /* För desktops */
 @media (min-width: 993px) {
   .courseCard {
     width: 100%;
+  }
+  .startText {
+    max-width: 50%;
+    margin: 2em 25%;
+  }
+  .main {
+    margin-bottom: 3rem;
   }
 }
