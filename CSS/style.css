@@ -54,6 +54,24 @@ nav {
   border-radius: 10%;
 }
 
+#showCart {
+  font-size: 16px;
+  border: none;
+  font-family: "Audiowide", cursive;
+  list-style: none;
+  display: inline-block;
+  /* padding: 2% 3%; */
+  position: relative;
+  background-color: rgba(134, 125, 125, 0.2);
+  color: black;
+  text-decoration: none;
+  border-radius: 10%;
+}
+
+#showCart:hover {
+  font-weight: bold;
+}
+
 .nav-links ul li a:hover {
   font-weight: bold;
 }
@@ -105,18 +123,33 @@ nav {
   margin-top: 0.8rem;
 }
 
+.modal {
+  display: none;
+}
+
 footer {
   background-color: #ababaf;
   width: 98vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   text-align: center;
   position: fixed;
   bottom: 0;
-  padding: 1rem 0rem;
+  left: 0;
+  padding: 1rem;
+}
+
+#showAdmin {
+  margin-right: 2rem;
 }
 
 /*För mobiltelefoner*/
 @media (max-width: 768px) {
   .nav-links ul li a {
+    background-color: rgba(105, 105, 105, 0.7);
+  }
+  #showCart {
     background-color: rgba(105, 105, 105, 0.7);
   }
   .course-container {

@@ -1,0 +1,56 @@
+[
+    {
+        "courseName": "C# Grunder",
+        "courseDcp": "Här står det grejer",
+        "courseNr": 1,
+        "price": 1000
+    },
+    {
+        "courseName": "HTML/CSS",
+        "courseDcp": "Här står det grejer",
+        "courseNr": 2,
+        "price": 500
+    },
+    {
+        "courseName": "JavaScript",
+        "courseDcp": "Här står det grejer",
+        "courseNr": 3,
+        "price": 2000
+    },
+    {
+        "courseName": "UX-design",
+        "courseDcp": "Här står det grejer",
+        "courseNr": 4,
+        "price": 1500
+    },
+    {
+        "courseName": "Nya utmaningar i den digitala världen",
+        "courseDcp": "Här står det grejer",
+        "courseNr": 5,
+        "price": 1200
+    },
+    {
+        "courseName": "Digital filosofi",
+        "courseDcp": "Här står det grejer",
+        "courseNr": 6,
+        "price": 1000
+    },
+    {
+        "courseName": "GDPR",
+        "courseDcp": "Här står det grejer",
+        "courseNr": 7,
+        "price": 100
+    },
+    {
+        "courseName": ".NET developer",
+        "courseDcp": "Här står det grejer",
+        "courseNr": 8,
+        "price": 10000
+    },
+    {
+        "courseName": "Moral på nätet",
+        "courseDcp": "Här står det grejer",
+        "courseNr": 9,
+        "price": 800
+    }
+]
