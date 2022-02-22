@@ -140,8 +140,16 @@ footer {
   padding: 1rem;
 }
 
+footer p {
+  font-size: 10px;
+}
+
 #showAdmin {
   margin-right: 2rem;
+}
+
+#addCourse {
+  margin-top: 1rem;
 }
 
 /*För mobiltelefoner*/

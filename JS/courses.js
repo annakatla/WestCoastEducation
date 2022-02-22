@@ -6,6 +6,8 @@ const cartCourses = [];
 var courseContainer = document.getElementById("course-container");
 var cartModal = document.getElementById("shoppingCart");
 var cartBtn = document.getElementById("showCart");  
+var adminModal = document.getElementById("admin")
+var adminBtn = document.getElementById("showAdmin");
 
 class Course {
     constructor(input) {
@@ -44,6 +46,7 @@ function addToCart(courseID) {
 cartBtn.onclick = function showCart(cartCourses) {
     cartModal.style.display = "block";
     courseContainer.style.display = "none";
+    adminModal.style.display = "none";
     let shoppingCart = document.createElement("ul");
     shoppingCart.className = "coursesInCart";
     for (let i = 0; i < cartCourses.length; i++) {
@@ -51,6 +54,16 @@ cartBtn.onclick = function showCart(cartCourses) {
         courseInCart.innerText = course.courseName;
         cartList.appendChild(courseInCart);
     }
+}
+
+adminBtn.onclick = function showAdmin() {
+    adminModal.style.display = "block";
+    courseContainer.style.display = "none";
+    cartModal.style.display = "none";
+    let testing = document.createElement("div");
+    let texting = document.createElement("p");
+    texting.innerText = "hejsan hoppsan";
+    testing.appendChild(texting);
 }
 
 fetch (jsonRequest)
