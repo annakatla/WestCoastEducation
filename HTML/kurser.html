@@ -34,19 +34,56 @@
       <main>
         <div class="main">
           <div id="course-container"></div>
-
           <div id="shoppingCart" class="modal">
             <div>
               <h3>Kundvagn</h3>
             </div>
-            <ul id="cartList"></ul>
+            <div>
+              <ul id="cartList"></ul>
+            </div>
           </div>
-
-          <div id="admin" class="modal"></div>
+          <div id="admin" class="modal">
+            <div>
+              <h3>Lägg till kurs</h3>
+            </div>
+            <div>
+              <label for="courseTitle">Kurstitel</label>
+            </div>
+            <div>
+              <input id="courseTitle" type="text" />
+            </div>
+            <div>
+              <label for="courseNum">Kursnummer</label>
+            </div>
+            <div>
+              <input id="courseNum" type="text" />
+            </div>
+            <div>
+              <label for="courseDcp">Beskrivning</label>
+            </div>
+            <div>
+              <textarea id="courseDcp" cols="30" rows="10"></textarea>
+            </div>
+            <div>
+              <label for="courseLength">Kurslängd</label>
+            </div>
+            <div>
+              <input id="courseLength" type="text" />
+            </div>
+            <div>
+              <button id="addCourse">Lägg till kurs</button>
+            </div>
+          </div>
         </div>
       </main>
       <footer>
-        <h6>Kontakta oss!</h6>
+        <div>
+          <h6>Kontakta oss!</h6>
+          <p>
+            Du kan ringa, maila och annat. Men kontaktuppgifter saknas här.
+            Lycka till!
+          </p>
+        </div>
         <button id="showAdmin">ADMIN</button>
       </footer>
     </div>
