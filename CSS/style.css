@@ -54,24 +54,6 @@ nav {
   border-radius: 10%;
 }
 
-#showCart {
-  font-size: 16px;
-  border: none;
-  font-family: "Audiowide", cursive;
-  list-style: none;
-  display: inline-block;
-  /* padding: 2% 3%; */
-  position: relative;
-  background-color: rgba(134, 125, 125, 0.2);
-  color: black;
-  text-decoration: none;
-  border-radius: 10%;
-}
-
-#showCart:hover {
-  font-weight: bold;
-}
-
 .nav-links ul li a:hover {
   font-weight: bold;
 }
@@ -128,7 +110,7 @@ nav {
 }
 
 footer {
-  background-color: #ababaf;
+  background-color: #d6bd9a;
   width: 98vw;
   display: flex;
   flex-direction: row;
@@ -144,8 +126,27 @@ footer p {
   font-size: 10px;
 }
 
-#showAdmin {
+#showCart,
+#showAdmin,
+#showCourses {
   margin-right: 2rem;
+  font-size: 16px;
+  border: none;
+  font-family: "Audiowide", cursive;
+  list-style: none;
+  display: inline-block;
+  padding: 0.1em;
+  position: relative;
+  background-color: whitesmoke;
+  color: black;
+  text-decoration: none;
+  border-radius: 10%;
+}
+
+#showCart:hover,
+#showAdmin:hover,
+#showCourses:hover {
+  font-weight: bold;
 }
 
 #addCourse {

@@ -24,9 +24,10 @@ class Course {
 //     cartCourses.push(courses[courseID]);
 // }
 
-function DeleteFromCart(courseID) {
-    //se till att kurs tas bort
-}
+// function DeleteFromCart(courseID) {
+//     delete cartCourses[courseID];
+//     showCart();
+// }
 
 function showCourseList(courseList) {
     for (let i = 0; i < courseList.length; i++) {
@@ -65,7 +66,9 @@ cartBtn.onclick = function showCart() {
         let courseNmb = i;
         deleteBtn.className = "DeleteCourseBtn";
         deleteBtn.innerText = "Ta bort";
-        deleteBtn.onclick = DeleteFromCart(courseNmb);
+        deleteBtn.onclick = function () {
+            delete cartCourses[courseNmb];
+        }
         courseName.innerText = course.courseName;
         coursePrice.innerText = course.price;
         courseCard.appendChild(courseName);
