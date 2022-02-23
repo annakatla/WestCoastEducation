@@ -58,10 +58,6 @@ nav {
   font-weight: bold;
 }
 
-.active {
-  color: yellow;
-}
-
 .main {
   width: 98vw;
   margin-bottom: 5rem;
@@ -85,7 +81,7 @@ nav {
 
 .course-container {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto;
   justify-content: space-between;
   align-items: center;
 }
@@ -97,7 +93,7 @@ nav {
   background-color: rgba(105, 105, 105, 0.5);
   padding: 1rem;
   text-align: center;
-  margin: 0.5rem 1rem;
+  margin: 0.5rem auto;
   border-radius: 5px;
 }
 
@@ -107,6 +103,30 @@ nav {
 
 .modal {
   display: none;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 footer {
@@ -130,7 +150,7 @@ footer p {
 #showAdmin,
 #showCourses {
   margin-right: 2rem;
-  font-size: 16px;
+  font-size: 12px;
   border: none;
   font-family: "Audiowide", cursive;
   list-style: none;
@@ -158,15 +178,6 @@ footer p {
   .nav-links ul li a {
     background-color: rgba(105, 105, 105, 0.7);
   }
-  #showCart {
-    background-color: rgba(105, 105, 105, 0.7);
-  }
-  .course-container {
-    grid-template-columns: auto;
-  }
-  .courseCard {
-    width: 100%;
-  }
   .main {
     margin-top: 3rem;
     margin-bottom: 15rem;
@@ -175,12 +186,6 @@ footer p {
 
 /* För paddor */
 @media (min-width: 769px) and (max-width: 992px) {
-  .course-container {
-    grid-template-columns: auto auto;
-  }
-  .courseCard {
-    width: 100%;
-  }
   .startText {
     max-width: 70%;
     margin: 2em 15%;
@@ -192,9 +197,6 @@ footer p {
 
 /* För desktops */
 @media (min-width: 993px) {
-  .courseCard {
-    width: 100%;
-  }
   .startText {
     max-width: 50%;
     margin: 2em 25%;

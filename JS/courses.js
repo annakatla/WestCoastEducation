@@ -4,11 +4,18 @@ const courses = [];
 const cartCourses = [];
 
 var courseContainer = document.getElementById("course-container");
+var courseBtn = document.getElementById("showCourses");
+
 var cartModal = document.getElementById("shoppingCart");
 var cartBtn = document.getElementById("showCart");  
+
+
 var adminModal = document.getElementById("admin")
 var adminBtn = document.getElementById("showAdmin");
 var addCourseBtn = document.getElementById("addCourse");
+
+var added = document.getElementById("courseAdded");
+var span = document.getElementsByClassName("close")[0];
 
 class Course {
     constructor(input) {
@@ -30,6 +37,7 @@ class Course {
 // }
 
 function showCourseList(courseList) {
+    courseContainer.innerHTML = "";
     for (let i = 0; i < courseList.length; i++) {
         let course = courseList[i];
         let courseCard = document.createElement("div");
@@ -52,10 +60,17 @@ function showCourseList(courseList) {
     }
 }
 
+courseBtn.onclick = function showCourses() {
+    courseContainer.style.display = "block";
+    cartModal.style.display = "none";
+    adminModal.style.display = "none";
+}
+
 cartBtn.onclick = function showCart() {
     cartModal.style.display = "block";
     courseContainer.style.display = "none";
     adminModal.style.display = "none";
+    cartModal.innerHTML = "";
     for (let i = 0; i < cartCourses.length; i++) {
         let course = cartCourses[i];
         let courseCard = document.createElement("div");
@@ -82,10 +97,6 @@ adminBtn.onclick = function showAdmin() {
     adminModal.style.display = "block";
     courseContainer.style.display = "none";
     cartModal.style.display = "none";
-    let testing = document.createElement("div");
-    let texting = document.createElement("p");
-    texting.innerText = "hejsan hoppsan";
-    testing.appendChild(texting);
 }
 
 addCourseBtn.onclick = function addCourse() {
@@ -99,9 +110,14 @@ addCourseBtn.onclick = function addCourse() {
     let course = new Course(admin);
     courses.push(course);
     showCourseList(courses);
-    adminModal.style.display = "none";
-    courseContainer.style.display = "block";
+    added.style.display = "block";
+    // adminModal.style.display = "none";
+    // courseContainer.style.display = "block";
 }
+
+span.onclick = function() {
+    added.style.display = "none";
+  }
 
 fetch (jsonRequest)
     .then((response) => response.json())
