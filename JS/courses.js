@@ -85,7 +85,7 @@ cartBtn.onclick = function showCart() {
             delete cartCourses[courseNmb];
         }
         courseName.innerText = course.courseName;
-        coursePrice.innerText = course.price;
+        coursePrice.innerText = `${course.price} kr.`;
         courseCard.appendChild(courseName);
         courseCard.appendChild(coursePrice);
         courseCard.appendChild(deleteBtn);
