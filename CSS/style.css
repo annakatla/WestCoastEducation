@@ -105,6 +105,10 @@ nav {
   display: none;
 }
 
+.cartBtn {
+  margin-top: 0.5em;
+}
+
 /* Modal Content/Box */
 .modal-content {
   background-color: #fefefe;

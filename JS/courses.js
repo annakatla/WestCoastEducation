@@ -71,6 +71,10 @@ cartBtn.onclick = function showCart() {
     courseContainer.style.display = "none";
     adminModal.style.display = "none";
     cartModal.innerHTML = "";
+    let rubrik = document.createElement("h6");
+    rubrik.innerText = "Kundvagn";
+    cartModal.appendChild(rubrik);
+    let summa = 0;
     for (let i = 0; i < cartCourses.length; i++) {
         let course = cartCourses[i];
         let courseCard = document.createElement("div");
@@ -79,7 +83,7 @@ cartBtn.onclick = function showCart() {
         let coursePrice = document.createElement("p");
         let deleteBtn = document.createElement("button");
         let courseNmb = i;
-        deleteBtn.className = "DeleteCourseBtn";
+        deleteBtn.className = "cartBtn";
         deleteBtn.innerText = "Ta bort";
         deleteBtn.onclick = function () {
             delete cartCourses[courseNmb];
@@ -90,7 +94,15 @@ cartBtn.onclick = function showCart() {
         courseCard.appendChild(coursePrice);
         courseCard.appendChild(deleteBtn);
         cartModal.appendChild(courseCard);
+        summa += course.price;
     }
+    let sum = document.createElement("h6");
+    sum.innerText = `SUMMA: ${summa} kr.`;
+    cartModal.appendChild(sum);
+    let buyBtn = document.createElement("button");
+    buyBtn.className = "cartBtn";
+    buyBtn.innerText = "KÖP";
+    cartModal.appendChild(buyBtn);
 }
 
 adminBtn.onclick = function showAdmin() {
