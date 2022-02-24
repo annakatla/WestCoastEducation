@@ -9,13 +9,15 @@ var courseBtn = document.getElementById("showCourses");
 var cartModal = document.getElementById("shoppingCart");
 var cartBtn = document.getElementById("showCart");  
 var bought = document.getElementById("boughtCourses");
+var spanB = document.getElementsByClassName("close")[1];
+
 
 var adminModal = document.getElementById("admin")
 var adminBtn = document.getElementById("showAdmin");
 var addCourseBtn = document.getElementById("addCourse");
 
 var added = document.getElementById("addedCourse");
-var span = document.getElementsByClassName("close")[0];
+var spanA = document.getElementsByClassName("close")[0];
 
 class Course {
     constructor(input) {
@@ -135,9 +137,13 @@ addCourseBtn.onclick = function addCourse() {
     added.style.display = "block";
 }
 
-span.onclick = function() {
+spanA.onclick = function() {
     added.style.display = "none";
   }
+
+spanB.onclick = function() {
+bought.style.display = "none";
+}
 
 fetch (jsonRequest)
     .then((response) => response.json())
