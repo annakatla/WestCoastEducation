@@ -1,4 +1,4 @@
-const jsonRequest = new Request("../js/courses.json");
+const jsonRequest = new Request("../JS/courses.json");
 
 const courses = [];
 const cartCourses = [];
@@ -129,8 +129,6 @@ addCourseBtn.onclick = function addCourse() {
     courses.push(course);
     showCourseList(courses);
     added.style.display = "block";
-    // adminModal.style.display = "none";
-    // courseContainer.style.display = "block";
 }
 
 span.onclick = function() {
