@@ -1,4 +1,4 @@
-const jsonRequest = new Request("../js/courses.json");
+const jsonRequest = "../js/courses.json";
 
 const courses = [];
 const cartCourses = [];
