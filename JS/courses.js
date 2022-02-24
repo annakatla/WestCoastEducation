@@ -8,13 +8,13 @@ var courseBtn = document.getElementById("showCourses");
 
 var cartModal = document.getElementById("shoppingCart");
 var cartBtn = document.getElementById("showCart");  
-
+var bought = document.getElementById("boughtCourses");
 
 var adminModal = document.getElementById("admin")
 var adminBtn = document.getElementById("showAdmin");
 var addCourseBtn = document.getElementById("addCourse");
 
-var added = document.getElementById("courseAdded");
+var added = document.getElementById("addedCourse");
 var span = document.getElementsByClassName("close")[0];
 
 class Course {
@@ -98,6 +98,7 @@ cartBtn.onclick = function showCart() {
         summa += course.price;
     }
     let sum = document.createElement("h6");
+    sum.className = "cartText";
     if (summa != 0) {
         sum.innerText = `SUMMA: ${summa} kr.`;
         cartModal.appendChild(sum);
@@ -105,6 +106,9 @@ cartBtn.onclick = function showCart() {
         buyBtn.className = "cartBtn";
         buyBtn.innerText = "KÖP";
         cartModal.appendChild(buyBtn);
+        buyBtn.onclick = function () {
+            bought.style.display = "block";
+        }
     } else {
         sum.innerText = "Kundvagnen är tom";
         cartModal.appendChild(sum);
