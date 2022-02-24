@@ -29,14 +29,14 @@ class Course {
     }
 }
 
-// function addToCart(courseID) {
-//     cartCourses.push(courses[courseID]);
-// }
+function addToCart(courseID) {
+    
+    cartCourses.push(courses[courseID]);
+}
 
-// function DeleteFromCart(courseID) {
-//     delete cartCourses[courseID];
-//     showCart();
-// }
+function deleteFromCart(courseID) {
+    cartCourses.splice(courseID, 1);
+}
 
 function showCourseList(courseList) {
     courseContainer.innerHTML = "";
@@ -50,9 +50,7 @@ function showCourseList(courseList) {
         let courseNmb = i;
         addToCartBtn.className = "courseBtn";
         addToCartBtn.innerText = "LÄGG TILL I KUNDVAGN";
-        addToCartBtn.onclick = function () {
-            cartCourses.push(courses[courseNmb]);
-        }
+        addToCartBtn.onclick = function() {addToCart(courseNmb)}
         courseName.innerText = course.courseName;
         courseDcp.innerText = course.courseDcp;
         courseCard.appendChild(courseName);
@@ -87,8 +85,8 @@ cartBtn.onclick = function showCart() {
         let courseNmb = i;
         deleteBtn.className = "cartBtn";
         deleteBtn.innerText = "Ta bort";
-        deleteBtn.onclick = function () {
-            cartCourses.splice(courseNmb, 1);
+        deleteBtn.onclick = function() {
+            deleteFromCart(courseNmb); 
             showCart();
         }
         courseName.innerText = course.courseName;
