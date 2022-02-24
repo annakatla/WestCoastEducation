@@ -86,7 +86,7 @@ cartBtn.onclick = function showCart() {
         deleteBtn.className = "cartBtn";
         deleteBtn.innerText = "Ta bort";
         deleteBtn.onclick = function () {
-            delete cartCourses[courseNmb];
+            cartCourses.splice(courseNmb, 1);
             showCart();
         }
         courseName.innerText = course.courseName;
