@@ -157,10 +157,16 @@ addCourseBtn.onclick = function addCourse() {
         alert("Du måste fylla i kurstitel!")
         return;
     }
+    if(document.getElementById("courseNum").value == "" || document.getElementById("courseNum").value == null) {
+        alert("Du måste fylla i kursnummer!")
+        return;
+    }
+
     let course = new Course(admin);
-    let courseExist = courses.find(c => c.courseName == course.courseName);
-    if (courseExist) {
-        alert("Kursen finns redan.")
+    let courseNameExist = courses.find(c => c.courseName == course.courseName);
+    let courseNrExist = courses.find(c => c.courseNr == course.courseNr);
+    if (courseNameExist || courseNrExist) {
+        alert("Kursen finns redan. Vänligen ange annan Kurstitel eller Kursnummer.")
         return;
     }
     courses.push(course);
