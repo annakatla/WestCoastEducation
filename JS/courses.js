@@ -161,6 +161,10 @@ addCourseBtn.onclick = function addCourse() {
         alert("Du måste fylla i kursnummer!")
         return;
     }
+    if (Number.isNaN(admin.price)) {
+        alert("Du måste fylla i rätt kostnad!")
+        return;
+    }
 
     let course = new Course(admin);
     let courseNameExist = courses.find(c => c.courseName == course.courseName);
