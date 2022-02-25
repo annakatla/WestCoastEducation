@@ -189,6 +189,22 @@ footer p {
   footer p {
     margin-right: 1rem;
   }
+  #showCart,
+  #showAdmin,
+  #showCourses {
+    margin-right: 0.1rem;
+    font-size: 10px;
+    border: none;
+    font-family: "Audiowide", cursive;
+    list-style: none;
+    display: list-item;
+    /* padding: 0.1em; */
+    position: flex;
+    background-color: whitesmoke;
+    color: black;
+    text-decoration: none;
+    border-radius: 10%;
+  }
 }
 
 /* För paddor */
