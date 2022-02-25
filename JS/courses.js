@@ -41,6 +41,10 @@ function deleteFromCart(courseID) {
     cartCourses.splice(courseID, 1);
 }
 
+function emptyCart() {
+    cartCourses.splice(0, cartCourses.length);
+}
+
 function showCourseList(courseList) {
     courseContainer.innerHTML = "";
     for (let i = 0; i < courseList.length; i++) {
@@ -67,12 +71,16 @@ courseBtn.onclick = function showCourses() {
     courseContainer.style.display = "block";
     cartModal.style.display = "none";
     adminModal.style.display = "none";
+    added.style.display = "none";
+    bought.style.display = "none";
 }
 
 cartBtn.onclick = function showCart() {
     cartModal.style.display = "block";
     courseContainer.style.display = "none";
     adminModal.style.display = "none";
+    added.style.display = "none";
+    bought.style.display = "none";
     cartModal.innerHTML = "";
     let rubrik = document.createElement("h3");
     rubrik.innerText = "Kundvagn";
@@ -111,6 +119,7 @@ cartBtn.onclick = function showCart() {
         cartModal.appendChild(buyBtn);
         buyBtn.onclick = function () {
             bought.style.display = "block";
+            emptyCart();
         }
     } else {
         sum.innerText = "Kundvagnen är tom";
@@ -119,9 +128,17 @@ cartBtn.onclick = function showCart() {
 }
 
 adminBtn.onclick = function showAdmin() {
+    document.getElementById("courseTitle").value = null;
+    document.getElementById("courseNum").value = null;
+    document.getElementById("courseDcp").value = null;
+    document.getElementById("courseLength").value = null;
+    document.getElementById("coursePrice").value = null;
+
     adminModal.style.display = "block";
     courseContainer.style.display = "none";
     cartModal.style.display = "none";
+    added.style.display = "none";
+    bought.style.display = "none";
 }
 
 addCourseBtn.onclick = function addCourse() {
@@ -133,6 +150,10 @@ addCourseBtn.onclick = function addCourse() {
         price: parseInt(document.getElementById("coursePrice").value),
     }
     let course = new Course(admin);
+    // if (courses.courseName.includes(course.courseName) || courses.includes(course.courseNr)) {
+    //     alert("Kursen finns redan.")
+    //     return;
+    // }
     courses.push(course);
     showCourseList(courses);
     added.style.display = "block";
