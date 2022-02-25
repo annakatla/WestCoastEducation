@@ -30,7 +30,10 @@ class Course {
 }
 
 function addToCart(courseID) {
-    
+    if (cartCourses.includes(courses[courseID])) {
+        alert("Du har redan lagt till kursen!");
+        return;
+    }
     cartCourses.push(courses[courseID]);
 }
 
@@ -124,10 +127,10 @@ adminBtn.onclick = function showAdmin() {
 addCourseBtn.onclick = function addCourse() {
     const admin = {
         courseName: document.getElementById("courseTitle").value,
-        courseNr: document.getElementById("courseNum").value,
+        courseNr: parseInt(document.getElementById("courseNum").value),
         courseDcp: document.getElementById("courseDcp").value,
         length: document.getElementById("courseLength").value,
-        price: document.getElementById("coursePrice").value,
+        price: parseInt(document.getElementById("coursePrice").value),
     }
     let course = new Course(admin);
     courses.push(course);
