@@ -151,7 +151,7 @@ addCourseBtn.onclick = function addCourse() {
         courseNr: parseInt(document.getElementById("courseNum").value),
         courseDcp: document.getElementById("courseDcp").value,
         length: document.getElementById("courseLength").value,
-        price: parseInt(document.getElementById("coursePrice").value),
+        price: parseInt(document.getElementById("coursePrice").value.replace(" ", "")),
     }
     if (admin.courseName === "" || admin.courseName === null) {
         alert("Du måste fylla i kurstitel!")
