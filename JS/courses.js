@@ -49,6 +49,14 @@ function emptyCart() {
     cartModal.appendChild(rubrik);
 }
 
+function emptyAdminFields() {
+    document.getElementById("courseTitle").value = '';
+    document.getElementById("courseNum").value = '';
+    document.getElementById("courseDcp").value = '';
+    document.getElementById("courseLength").value = '';
+    document.getElementById("coursePrice").value = '';
+}
+
 function showCourseList(courseList) {
     courseContainer.innerHTML = "";
     for (let i = 0; i < courseList.length; i++) {
@@ -132,12 +140,7 @@ cartBtn.onclick = function showCart() {
 }
 
 adminBtn.onclick = function showAdmin() {
-    document.getElementById("courseTitle").value = null;
-    document.getElementById("courseNum").value = null;
-    document.getElementById("courseDcp").value = null;
-    document.getElementById("courseLength").value = null;
-    document.getElementById("coursePrice").value = null;
-
+    emptyAdminFields();
     adminModal.style.display = "block";
     courseContainer.style.display = "none";
     cartModal.style.display = "none";
@@ -180,6 +183,8 @@ addCourseBtn.onclick = function addCourse() {
 
 spanA.onclick = function() {
     added.style.display = "none";
+    emptyAdminFields();
+    showAdmin();
   }
 
 spanB.onclick = function() {
