@@ -153,12 +153,16 @@ addCourseBtn.onclick = function addCourse() {
         length: document.getElementById("courseLength").value,
         price: parseInt(document.getElementById("coursePrice").value),
     }
+    if (admin.courseName === "" || admin.courseName === null) {
+        alert("Du måste fylla i kurstitel!")
+        return;
+    }
     let course = new Course(admin);
-
-    // if (courses.courseName.includes(course.courseName) || courses.includes(course.courseNr)) {
-    //     alert("Kursen finns redan.")
-    //     return;
-    // }
+    let courseExist = courses.find(c => c.courseName == course.courseName);
+    if (courseExist) {
+        alert("Kursen finns redan.")
+        return;
+    }
     courses.push(course);
     showCourseList(courses);
     added.style.display = "block";
