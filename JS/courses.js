@@ -43,6 +43,10 @@ function deleteFromCart(courseID) {
 
 function emptyCart() {
     cartCourses.splice(0, cartCourses.length);
+    cartModal.innerHTML = "";
+    let rubrik = document.createElement("h3");
+    rubrik.innerText = "Kundvagn";
+    cartModal.appendChild(rubrik);
 }
 
 function showCourseList(courseList) {
@@ -150,6 +154,7 @@ addCourseBtn.onclick = function addCourse() {
         price: parseInt(document.getElementById("coursePrice").value),
     }
     let course = new Course(admin);
+
     // if (courses.courseName.includes(course.courseName) || courses.includes(course.courseNr)) {
     //     alert("Kursen finns redan.")
     //     return;
